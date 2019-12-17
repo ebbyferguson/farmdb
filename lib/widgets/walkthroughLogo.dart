@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 
-class Walkthrough extends StatefulWidget {
+class WalkthroughLogo extends StatefulWidget {
   final title;
   final content;
   final imageIcon;
   final imagecolor;
 
-  Walkthrough(
+  WalkthroughLogo(
       {this.title,
       this.content,
       this.imageIcon,
       this.imagecolor = Colors.redAccent});
 
   @override
-  WalkthroughState createState() {
-    return WalkthroughState();
+  WalkthroughLogoState createState() {
+    return WalkthroughLogoState();
   }
 }
 
-class WalkthroughState extends State<Walkthrough>
+class WalkthroughLogoState extends State<WalkthroughLogo>
     with SingleTickerProviderStateMixin {
   Animation animation;
   AnimationController animationController;
@@ -67,6 +67,11 @@ class WalkthroughState extends State<Walkthrough>
                     color: Colors.black),
               ),
             ),
+            Icon(
+              widget.imageIcon,
+              size: 100.0,
+              color: widget.imagecolor,
+            ),
             Transform(
               transform: Matrix4.translationValues(animation.value, 0.0, 0.0),
               child: Text(widget.content,
@@ -77,11 +82,6 @@ class WalkthroughState extends State<Walkthrough>
                       fontSize: 16.0,
                       color: Colors.black)),
             ),
-            Icon(
-              widget.imageIcon,
-              size: 100.0,
-              color: widget.imagecolor,
-            )
           ],
         ),
       ),

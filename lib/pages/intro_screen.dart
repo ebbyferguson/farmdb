@@ -1,7 +1,10 @@
+import 'package:farmdb/presentation/logoicon_icons.dart';
+import 'package:farmdb/presentation/piccamera_icons.dart';
+import 'package:farmdb/presentation/qrscan_icons.dart';
 import 'package:farmdb/utils/farmdb.dart';
-import 'package:farmdb/utils/farmdb.dart';
+import 'package:farmdb/utils/styles.dart';
+import 'package:farmdb/widgets/walkthroughLogo.dart';
 import 'package:flutter/material.dart';
-import 'package:farmdb/utils/farmdb.dart';
 import 'package:farmdb/utils/my_navigator.dart';
 import 'package:farmdb/widgets/walkthrough.dart';
 
@@ -31,7 +34,13 @@ class IntroScreenState extends State<IntroScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.green,
+      color: Styles.colorPrimary,
+      // decoration: BoxDecoration(
+      //     gradient: LinearGradient(
+      //         begin: Alignment.topLeft,
+      //         end: Alignment.bottomRight,
+      //         colors: [Colors.green[300], Styles.colorPrimaryDark])
+      //         ),
       padding: EdgeInsets.all(10.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -44,25 +53,29 @@ class IntroScreenState extends State<IntroScreen> {
             flex: 3,
             child: PageView(
               children: <Widget>[
-                Walkthrough(
-                  title: Farmdb.wt1,
+                WalkthroughLogo(
+                  title: 'Welcome',
                   content: Farmdb.wc1,
-                  imageIcon: Icons.mobile_screen_share,
+                  imageIcon: Logoicon.leaf,
+                  imagecolor: Colors.green[700],
                 ),
                 Walkthrough(
-                  title: Farmdb.wt2,
+                  title: Farmdb.step1,
                   content: Farmdb.wc2,
-                  imageIcon: Icons.search,
+                  imageIcon: Qrscan.qr_code,
+                  imagecolor: Colors.green[700],
                 ),
                 Walkthrough(
-                  title: Farmdb.wt3,
+                  title: Farmdb.step2,
                   content: Farmdb.wc3,
-                  imageIcon: Icons.shopping_cart,
+                  imageIcon: Piccamera.camera,
+                  imagecolor: Colors.green[700],
                 ),
-                Walkthrough(
-                  title: Farmdb.wt4,
+                WalkthroughLogo(
+                  title: 'Done',
                   content: Farmdb.wc4,
-                  imageIcon: Icons.verified_user,
+                  imageIcon: Icons.done,
+                  imagecolor: Colors.green[700],
                 ),
               ],
               controller: controller,

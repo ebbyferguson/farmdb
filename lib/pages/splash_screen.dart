@@ -1,5 +1,5 @@
 import 'dart:async';
-
+import 'package:farmdb/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:farmdb/utils/farmdb.dart';
 import 'package:farmdb/utils/my_navigator.dart';
@@ -10,6 +10,7 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+
   @override
   void initState() {
     // TODO: implement initState
@@ -24,7 +25,7 @@ class _SplashScreenState extends State<SplashScreen> {
         fit: StackFit.expand,
         children: <Widget>[
           Container(
-            decoration: BoxDecoration(color: Colors.green),
+            decoration: BoxDecoration(color: Styles.colorPrimary),
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -38,11 +39,12 @@ class _SplashScreenState extends State<SplashScreen> {
                       CircleAvatar(
                         backgroundColor: Colors.white,
                         radius: 50.0,
-                        child: Icon(
-                          Icons.,
-                          color: Colors.greenAccent,
-                          size: 50.0,
-                        ),
+                        child: Image.asset(
+                            'images/farmdb_logo.png',
+                            height: 55.0,
+                            width: 55.0,
+                            color: Styles.colorPrimary,
+                          ),
                       ),
                       Padding(
                         padding: EdgeInsets.only(top: 10.0),

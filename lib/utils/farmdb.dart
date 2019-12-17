@@ -1,19 +1,21 @@
 class Farmdb {
   static const String name = "FarmDB";
-  static const String store = "Farm Database\n For All Farmers";
+  static const String store = "For All Farmers";
   static const String wt1 = "WELCOME";
   static const String wc1 =
-      "FarmDB helps you make the best decisions for your farm\n Platform for Everyone";
+      "Follow these steps\n and get the best out of\n farm your land";
   static const String wt2 = "DISCOVER PRODUCT";
   static const String wc2 =
-      "Search Latest and Featured Product\n With Best Price";
+      "Scan the QR code\n behind the card provided";
   static const String wt3 = "ADD TO CART";
   static const String wc3 =
-      "Add to Cart All Product You need\n And Checkout the Order";
+      "Take a picture\n of the card after color change";
   static const String wt4 = "VERIFY AND RECEIVE";
   static const String wc4 =
-      "We Will Verify Your Order\n Pay the bill and Receive the Product";
+      "Now implement the \n suggestions provided and\n watch your yield increase";
   static const String skip = "SKIP";
   static const String next = "NEXT";
   static const String gotIt = "GOT IT";
+  static const String step1 = "STEP 1";
+  static const String step2 = "STEP 2";
 }
